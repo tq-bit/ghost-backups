@@ -3,6 +3,7 @@ const { join } = require('path');
 // Configure the relevant API params
 const ghostApiUrl = process.env.ghostApiUrl;
 const ghostApiPaths = ['posts', 'pages', 'site', 'users'];
+const ghostApiPathsRestore = ['posts', 'pages'];
 const ghostAdminKey = process.env.ghostAdminKey;
 
 // Configure the backup settings
@@ -28,6 +29,7 @@ const genBackupDirPath = () => {
 module.exports = {
 	ghostApiUrl,
 	ghostApiPaths,
+	ghostApiPathsRestore,
 	ghostAdminKey,
 	backupInterval,
 	backupLifetime,
