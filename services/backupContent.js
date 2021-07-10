@@ -52,7 +52,7 @@ async function runBackupContent() {
 			if (response.status !== 200) {
 				const errPath = join(dir, path + 'error.json');
 				const data = await response.json();
-				writeFileSync(errPath, jsonStringify(data));
+				writeFileSync(errPath, JSON.stringify(data));
 				log(red(`❌ ${new Date()}: Something went wrong while trying to backup ${path}`));
 
 				// If the http status is returned as expected, write the result to a file
