@@ -23,7 +23,7 @@ async function runBackupContent() {
 		mkdirSync(dir);
 
 		// Check for old backups and clean them up
-		const deleted = deleteOldDirectories(backupDirPath, backupLifetime);
+		const deleted = await deleteOldDirectories(backupDirPath, backupLifetime);
 		if (deleted.length > 0) {
 			deleted.forEach(deletedBackup => log(yellow(`☝ Deleted backup from ${deletedBackup}`)));
 		} else {

@@ -35,7 +35,7 @@ function genAdminHeaders(ghostAdminKey) {
  * @param {String} dirPath The path to where backups are being stored
  * @param {Number} backupLifetime The amount of months a backup is to be stored
  *
- * @returns {Array} An array of paths that have been deleted
+ * @returns {Promise<Array>} An array of paths that have been deleted
  */
 
 async function deleteOldDirectories(dirPath, backupLifetime) {
